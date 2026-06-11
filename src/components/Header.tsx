@@ -76,15 +76,13 @@ export default function Header() {
             </Link>
           ))}
           {isAdmin && (
-            <Link
-              to="/admin"
-              activeProps={{ className: "text-primary font-semibold" }}
-              inactiveProps={{ className: "text-muted-foreground hover:text-foreground" }}
-              className="flex items-center gap-1.5 rounded-md px-3 py-2 text-sm font-medium transition-colors"
+            <button
+              onClick={() => navigate({ to: "/admin" })}
+              className="flex items-center gap-1.5 rounded-md px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               <Shield className="h-4 w-4" />
               Admin
-            </Link>
+            </button>
           )}
         </nav>
 
