@@ -14,7 +14,7 @@ export const Route = createFileRoute("/_authenticated/orders")({
   loader: ({ context }) =>
     context.queryClient.ensureQueryData({
       queryKey: ["orders"],
-      queryFn: () => useServerFn(getOrders)({ data: {} }),
+      queryFn: () => useServerFn(getOrders)(),
     }),
   component: OrdersPage,
 });
@@ -23,7 +23,7 @@ function OrdersPage() {
   const fetchOrders = useServerFn(getOrders);
   const { data: orders } = useSuspenseQuery({
     queryKey: ["orders"],
-    queryFn: () => fetchOrders({ data: {} }),
+    queryFn: () => fetchOrders(),
   });
 
   if (!orders?.length) {
