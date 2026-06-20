@@ -17,7 +17,7 @@ export const Route = createFileRoute("/")({
   loader: ({ context }) =>
     context.queryClient.ensureQueryData({
       queryKey: ["featured-products"],
-      queryFn: () => useServerFn(getProducts)({ data: {} }),
+      queryFn: () => getProducts({ data: {} }),
     }),
   component: Index,
 });
