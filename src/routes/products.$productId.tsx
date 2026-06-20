@@ -17,7 +17,7 @@ export const Route = createFileRoute("/products/$productId")({
   loader: ({ context, params }) =>
     context.queryClient.ensureQueryData({
       queryKey: ["product", params.productId],
-      queryFn: () => useServerFn(getProductById)({ data: { id: params.productId } }),
+      queryFn: () => getProductById({ data: { id: params.productId } }),
     }),
   component: ProductDetailPage,
 });
