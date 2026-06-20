@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import funakoshiPhoto from "@/assets/funakoshi.jpg";
+import funakoshiPhoto from "@/assets/funakoshi-real.webp";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
