@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import funakoshiPhoto from "@/assets/funakoshi.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -25,12 +26,17 @@ function AboutPage() {
         <section className="rounded-2xl border bg-card p-8">
           <h2 className="text-2xl font-bold text-primary">Gichin Funakoshi (1868–1957)</h2>
           <div className="mt-4 grid gap-6 md:grid-cols-[1fr_2fr]">
-            <div className="rounded-xl bg-muted p-6 text-center">
-              <div className="mx-auto h-32 w-32 rounded-full bg-primary/10 grid place-items-center text-4xl font-bold text-primary">
-                GF
-              </div>
+            <div className="rounded-xl bg-muted p-4 text-center">
+              <img
+                src={funakoshiPhoto}
+                alt="Master Gichin Funakoshi, founder of Shotokan karate"
+                width={1024}
+                height={1024}
+                loading="lazy"
+                className="mx-auto aspect-square w-full max-w-[220px] rounded-xl object-cover ring-2 ring-primary/20"
+              />
               <p className="mt-3 text-sm font-semibold">Master Funakoshi</p>
-              <p className="text-xs text-muted-foreground">Founder of Shotokan</p>
+              <p className="text-xs text-muted-foreground">Founder of Shotokan (1868–1957)</p>
             </div>
             <div className="space-y-4 text-muted-foreground">
               <p>
