@@ -85,9 +85,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Premium Shotokan karate equipment, gi, belts, and training gear. Worldwide shipping." },
       { name: "author", content: "rudradavee.netlify.app" },
       { property: "og:title", content: "ShotokanShop - Authentic Karate Gear" },
-      { property: "og:description", content: "Premium Shotokan karate equipment, gi, belts, and training gear." },
+      { property: "og:description", content: "Premium Shotokan karate equipment, gi, belts, and training gear. Worldwide shipping." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: "ShotokanShop - Authentic Karate Gear" },
+      { name: "twitter:description", content: "Premium Shotokan karate equipment, gi, belts, and training gear. Worldwide shipping." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/411bd2b5-0590-46d1-9ab4-f1518fb2e642" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/411bd2b5-0590-46d1-9ab4-f1518fb2e642" },
     ],
     links: [
       {
