@@ -39,9 +39,22 @@ function ProductsPage() {
     activeCategory === "All" ? products : products?.filter((p) => p.category === activeCategory);
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-12">
-      <h1 className="text-3xl font-bold tracking-tight">Shop All Gear</h1>
-      <p className="mt-1 text-muted-foreground">Authentic equipment for serious karateka</p>
+    <div>
+      {/* Shop Hero */}
+      <div className="relative h-64 w-full overflow-hidden">
+        <img
+          src={shopHero}
+          alt="Traditional karate dojo with training equipment"
+          className="h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent" />
+        <div className="absolute inset-0 flex flex-col items-center justify-end pb-8 text-center">
+          <h1 className="text-4xl font-extrabold tracking-tight text-foreground">Shop All Gear</h1>
+          <p className="mt-2 text-muted-foreground">Authentic equipment for serious karateka</p>
+        </div>
+      </div>
+
+      <div className="mx-auto max-w-7xl px-4 py-12">
 
       <div className="mt-6 flex flex-wrap gap-2">
         {categories.map((cat) => (
