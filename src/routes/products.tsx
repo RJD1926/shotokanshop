@@ -6,6 +6,7 @@ import { ShoppingCart, Filter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { getProducts } from "@/lib/products.functions";
 import { useCartStore } from "@/stores/cartStore";
+import shopHero from "@/assets/shop-hero.jpg";
 
 export const Route = createFileRoute("/products")({
   head: () => ({
